@@ -10,21 +10,22 @@ package hundirlaflota;
  * @author Alanis
  */
 public class Jugador {
-    private String nombre;
+    private char nombre;
+    private Tablero tablero;
     
     //--------------------------------------------------------------------------------------
     
-    public Jugador(String nombre) {
+    public Jugador(char nombre) {
         this.nombre = nombre;
     }
         
     //--------------------------------------------------------------------------------------
         
-    public String getNombre() {
+    public char getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(char nombre) {
         this.nombre = nombre;
     }
     
@@ -32,11 +33,15 @@ public class Jugador {
     
     public void jugarRonda(Tablero t1){
         
+        System.out.println("");
+        bombardear(, t1);
     }
     
-    public boolean colocarBarco(){
+    public boolean colocarBarco(Jugador j, Barco barco, int cabezaX, int cabezaY, boolean direccion){
         boolean colocado = false;
         //....
+        // comprobar q en las casillas estan disponibles. 7
+        // instanciar casillas nuevas, guardando el barco (new casilla( i, j , barco ))
         
         
         
@@ -44,8 +49,8 @@ public class Jugador {
         return colocado;
     }
     
-    public void bombardear(Casilla pos, Tablero tablero){
-        
+    public void bombardear(int x, int y, Tablero tablero){
+       Casilla a = tablero.c[x][y].;
     }
     
     public void bombardearAutomatico(Tablero tablero){
