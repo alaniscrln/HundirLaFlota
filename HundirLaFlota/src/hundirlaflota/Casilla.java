@@ -70,4 +70,12 @@ public class Casilla {
             this.barco.recibirImpacto();
         }
     }
+    
+    private boolean posicion(int pos){      // antes de llamar al metodo controlar q solo recibe un '1' o un '0'
+        if (pos == 1) {
+            return true;    // vertical hacia abajo
+        }else{
+            return false;   // horizontal hacia derecha
+        }
+    }
 }
