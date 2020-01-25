@@ -12,6 +12,7 @@ package hundirlaflota;
 public class Tablero {
     Casilla[][] c;
     int size;
+    Barco[] barco = new Barco[6];
     
     
     //-----------------------------------------------------------------------------
@@ -23,6 +24,11 @@ public class Tablero {
                 c[i][j] = new Casilla(i, j);            // en la pos de esa matriz, creo un obj casilla    
             }
         }
+        
+        for (int i = 0, j = 3; i < barco.length; i = i+2, j--) {
+            barco[i] = new Barco(j);
+            barco[i+1] = new Barco(j);
+            }
         
         this.size = n;
         
