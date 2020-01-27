@@ -12,9 +12,10 @@ package hundirlaflota;
 public class Casilla {
     private int x;
     private int y;
-    private Barco barco;            //no entiendo para q (duda de alanis)
+    private Barco barco;            
     private boolean fueBombardeada;
     private String value;
+    private final String ANSI_CYAN = "\u001B[36m";
 
     //-----------------------------------------------------------------------------
 
@@ -28,6 +29,7 @@ public class Casilla {
         this.x = x;
         this.y = y;
         this.fueBombardeada = false;       
+        this.value = ANSI_CYAN + "~";
     }
     
     /**
@@ -109,5 +111,12 @@ public class Casilla {
         }
     }
 
-   
+    
+    private boolean posicion(int pos){      // antes de llamar al metodo controlar q solo recibe un '1' o un '0'
+        if (pos == 1) {
+            return true;    // vertical hacia abajo
+        }else{
+            return false;   // horizontal hacia derecha
+        }
+    }
 }
