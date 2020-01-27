@@ -18,7 +18,7 @@ public class Jugador {
     public Jugador(char nombre) {
         this.nombre = nombre;
     }
-        
+        sffdgghhg
     //--------------------------------------------------------------------------------------
         
     public char getNombre() {
