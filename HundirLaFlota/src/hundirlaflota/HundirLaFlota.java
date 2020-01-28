@@ -18,8 +18,6 @@ public class HundirLaFlota {
         // TODO code application logic here
         //pruebaa
         //gvjgk
-         hola caracola
-        
         System.out.println("hola");
         System.out.println("Adios");
                 
